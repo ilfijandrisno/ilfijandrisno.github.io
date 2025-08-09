@@ -1,10 +1,272 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilfi Pages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .typing::after {
+      content: '|';
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+  <!-- Scrollbar Customization -->
+  <style>
+    /* Hide track, blend scrollbar thumb */
+    .project-card p::-webkit-scrollbar        { width: 6px; }
+    .project-card p::-webkit-scrollbar-track  { background: transparent; }
+    .project-card p::-webkit-scrollbar-thumb  { background: #4b5563; border-radius: 3px; }
+
+    /* Firefox */
+    .project-card p {
+      scrollbar-width: thin;
+      scrollbar-color: #4b5563 transparent;
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello World!</h1>
-  <p>This is my GitHub Pages site.</p>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-yellow-400 font-bold text-xl">Ilfi Jandrisno</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#home" class="hover:text-yellow-400">Home</a>
+        <a href="#about" class="hover:text-yellow-400">Tentang</a>
+        <a href="#techstack" class="hover:text-yellow-400">Tech Stack</a>
+        <a href="#projects" class="hover:text-yellow-400">Proyek</a>
+        <a href="#contact" class="hover:text-yellow-400">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center pt-28 bg-gradient-to-b from-gray-900 to-gray-700">
+    <img src="assets/img/profile.jpg" alt="Profile" class="w-36 h-36 rounded-full border-4 border-yellow-400 shadow-lg" />
+    <h2 class="text-3xl md:text-5xl font-bold mt-6 type-first" data-text="Hai, I'm Ilfi Jandrisno"></h2>
+    <p class="mt-4 text-lg max-w-xl type-second" data-text="Data Engineer (Data and AI Enthusiast)."></p>
+    <div class="flex gap-4 mt-6">
+      <a href="#projects" class="px-6 py-2 bg-blue-600 hover:bg-blue-900 rounded-full">Lihat Proyek</a>
+      <a href="#contact" class="px-6 py-2 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white">Kontak Saya</a>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="py-20 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <img src="assets/img/profile.jpg" alt="Tentang Saya" class="rounded-lg shadow-md" />
+      <div>
+        <h3 class="text-3xl font-bold mb-4 text-yellow-400">Tentang Saya</h3>
+        <p class="text-gray-300 mb-4">Experienced IT professional with a strong background in management information systems (MIS), data engineering, and business intelligence. Proven expertise in ETL processes, data warehousing, analytics, budgeting, and activity-based costing. Skilled in designing interactive dashboards that enhance decision-making and reduce analysis time.</p>
+        <a href="assets/CV_Ilfi_Jandrisno.pdf" class="px-5 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-full">Unduh CV</a>
+        <!-- Lokasi, HP, Email -->
+        <div class="mt-6 space-y-2 text-gray-300">
+          <p class="flex items-center gap-3">
+            <i class="fas fa-map-marker-alt text-yellow-400 w-5"></i>
+            <span>DKI Jakarta, Indonesia</span>
+          </p>
+          <p class="flex items-center gap-3">
+            <i class="fas fa-phone text-yellow-400 w-5"></i>
+            <span>+62 8xx-xxxx-xxxx</span>
+          </p>
+          <p class="flex items-center gap-3">
+            <i class="fa-brands fa-linkedin text-yellow-400 w-5"></i>
+            <span>linkedin.com/ilfijandrisno</span>
+          </p>
+          <p class="flex items-center gap-3">
+            <i class="fas fa-envelope text-yellow-400 w-5"></i>
+            <span>ilfijandrisno@yahoo.com</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="techstack" class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-yellow-400 mb-12">Tech Stack</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-6 text-center">
+        <div><i class="fas fa-database text-4xl text-yellow-300"></i><p class="mt-2">SQL Server</p></div>
+        <div><i class="fab fa-python text-4xl text-blue-400"></i><p class="mt-2">Python</p></div>
+        <div><i class="fab fa-aws text-4xl text-green-500"></i><p class="mt-2">AWS</p></div>
+        <div>
+          <img src="icons/Tableau.png" class="h-12 mx-auto"><p>Tableau</p>
+        </div>
+        <div>
+          <img src="icons/SSIS.png" class="h-12 mx-auto"><p>SSIS</p>
+        </div>
+        <div><i class="fab fa-git-alt text-4xl text-orange-500"></i><p class="mt-2">Git</p></div>
+        <div>
+          <img src="icons/ETL.png" class="h-12 mx-auto"><p>ETL</p>
+        </div>
+        <div>
+          <img src="icons/VScode.png" class="h-12 mx-auto"><p>VSCode</p>
+        </div>
+        <div>
+          <img src="icons/Linux.png" class="h-12 mx-auto"><p>Linux</p>
+        </div>
+        <div>
+          <img src="icons/Pentaho.png" class="h-12 mx-auto"><p>Pentaho</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyek -->
+  <section id="projects" class="py-20 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-yellow-400 mb-12">Proyek Terbaru</h3>
+      <!-- Filter buttons -->
+      <div class="mb-8 flex flex-wrap justify-center gap-2">
+        <button class="filter-btn px-4 py-2 bg-yellow-500 text-white rounded-full active" data-filter="all">All</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="ds">Data Science</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="algo">Algorithm Utility</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="etl">ETL</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="dashboard">Dashboard</button>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="algo">
+          <img src="assets/img/Penentu_hari.png" alt="Proyek 1" class="rounded mb-3">
+          <h4 class="font-bold">Program Penentu Hari</h4>
+          <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">Program ini dibuat untuk menentukan hari dalam seminggu berdasarkan input tanggal, bulan, dan tahun dari pengguna. Perhitungan dilakukan menggunakan Zeller’s Congruence, yaitu rumus matematika yang umum digunakan dalam sistem kalender modern.</p>
+          <div class="mt-auto">
+            <!-- tech tags -->
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="flex items-center gap-1 px-2 py-1 text-xs bg-blue-600 text-white rounded">
+                <img src="icons/python.png" class="h-3 w-3"> Python
+              </span>
+              <span class="px-2 py-1 text-xs bg-orange-600 text-white rounded">Eco TechnoLeader</span>
+            </div>
+            <!-- tombol GitHub -->
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/ilfijandrisno/TASK-REPOSITORY"
+                target="_blank"
+                class="inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 hover:bg-yellow-500 text-white rounded">
+                <i class="fab fa-github"></i>
+                Check on GitHub
+              </a>
+              <a
+                href="https://penentuhari.streamlit.app/"
+                target="_blank"
+                class="inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 hover:bg-yellow-500 text-white rounded">
+                <i class="fas fa-play-circle"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="ds">
+          <img src="assets/img/Triangle_Corr_Heatmap.png" alt="Proyek 2" class="rounded mb-3" />
+          <h4 class="font-bold">🌿MangroveChain</h4>
+          <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">🌿MangroveChain adalah sistem inovatif yg menggabungkan teknologi blockchain dengan upaya konservasi mangrove di Indonesia. Platform analisis ini menyediakan wawasan ttg 30 proyek konservasi dari Aceh hingga Papua, melacak kepatuhan regulasi, dampak biodiversitas, keterlibatan masyarakat & transaksi kredit karbon tercatat dalam ledger blockchain.</p>
+          <div class="mt-auto">
+            <!-- tech tags -->
+             <!--
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 text-xs bg-blue-600 text-white rounded">Python</span>
+            </div> -->
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="flex items-center gap-1 px-2 py-1 text-xs bg-blue-600 text-white rounded">
+                <img src="icons/python.png" class="h-3 w-3"> Python
+              </span>
+              <span class="px-2 py-1 text-xs bg-orange-600 text-white rounded">Eco TechnoLeader</span>
+            </div>
+            <!-- tombol GitHub -->
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/ilfijandrisno/ECC-NIN_MangroveChain_IlfiJandrisno_Batch9"
+                target="_blank"
+                class="inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 hover:bg-yellow-500 text-white rounded">
+                <i class="fab fa-github"></i>
+                Check on GitHub
+              </a>
+              <button disabled
+                      title="Belum tersedia live demo"
+                      class="opacity-50 cursor-not-allowed inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 text-white rounded">
+                <i class="fas fa-play-circle"></i>
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900"data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-yellow-400 mb-12">Kontak & Sosial Media</h3>
+      <div class="social-links mb-8 flex flex-wrap justify-center gap-2">
+        <a href="mailto:ilfijandrisno@yahoo.com" class="...">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://linkedin.com/in/ilfijandrisno" target="_blank" class="...">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/ilfijandrisno" target="_blank" class="...">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="font-size: 12px;">
+    <p>© 2025 Ilfi Jandrisno. Dibuat dengan sepenuh ❤️</p>
+  </footer>
+
+
+  <script>
+    /* typing text */
+    function type(el, speed = 80) {
+      return new Promise(resolve => {
+        const txt = el.dataset.text;
+        let i = 0;
+        el.textContent = '';
+        const timer = setInterval(() => {
+          el.textContent += txt[i++];
+          if (i === txt.length) {
+            clearInterval(timer);
+            resolve();
+          }
+        }, speed);
+      });
+    }  
+    (async () => {
+      await type(document.querySelector('.type-first'));
+      await type(document.querySelector('.type-second'));
+    })();
+  </script>
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards   = document.querySelectorAll('.project-card');  
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // ubah warna tombol aktif
+        buttons.forEach(b => b.classList.replace('bg-yellow-500', 'bg-gray-600'));
+        btn.classList.replace('bg-gray-600', 'bg-yellow-500');   
+      
+        // filter kartu
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const cat = card.dataset.category;
+          card.style.display =
+            (filter === 'all' || cat === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
