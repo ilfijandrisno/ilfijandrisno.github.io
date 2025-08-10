@@ -130,13 +130,20 @@
         <button class="filter-btn px-4 py-2 bg-yellow-500 text-white rounded-full active" data-filter="all">All</button>
         <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="ds">Data Science</button>
         <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="algo">Algorithm Utility</button>
-        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="etl">ETL</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="db">Database</button>
         <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="dashboard">Dashboard</button>
       </div>
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
         <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="algo">
-          <img src="assets/img/Penentu_hari.png" alt="Proyek 1" class="rounded mb-3">
-          <h4 class="font-bold">Program Penentu Hari</h4>
+          <!-- Thumbnail -->
+          <div class="relative w-full h-40 md:h-44 rounded overflow-hidden mb-3">
+            <img src="assets/img/Penentu_hari.png"
+                 alt="Proyek 3"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy">
+          </div>
+          <h4 class="font-bold">🖥️Program Penentu Hari</h4>
           <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">Program ini dibuat untuk menentukan hari dalam seminggu berdasarkan input tanggal, bulan, dan tahun dari pengguna. Perhitungan dilakukan menggunakan Zeller’s Congruence, yaitu rumus matematika yang umum digunakan dalam sistem kalender modern.</p>
           <div class="mt-auto">
             <!-- tech tags -->
@@ -167,7 +174,13 @@
         </div>
         <!-- Project 2 -->
         <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="ds">
-          <img src="assets/img/Triangle_Corr_Heatmap.png" alt="Proyek 2" class="rounded mb-3" />
+          <!-- Thumbnail -->
+          <div class="relative w-full h-40 md:h-44 rounded overflow-hidden mb-3">
+            <img src="assets/img/Triangle_Corr_Heatmap.png"
+                 alt="Proyek 3"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy">
+          </div>
           <h4 class="font-bold">🌿MangroveChain</h4>
           <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">🌿MangroveChain adalah sistem inovatif yg menggabungkan teknologi blockchain dengan upaya konservasi mangrove di Indonesia. Platform analisis ini menyediakan wawasan ttg 30 proyek konservasi dari Aceh hingga Papua, melacak kepatuhan regulasi, dampak biodiversitas, keterlibatan masyarakat & transaksi kredit karbon tercatat dalam ledger blockchain.</p>
           <div class="mt-auto">
@@ -200,12 +213,49 @@
             </div>
           </div>
         </div>
+        <!-- Project 3 -->
+        <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="db">
+          <!-- Thumbnail -->
+          <div class="relative w-full h-40 md:h-44 rounded overflow-hidden mb-3">
+            <img src="assets/img/tutorial_postgresql.png"
+                 alt="Proyek 3"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy">
+          </div>
+          <h4 class="font-bold">🛢️Tutorial Database Mangrove With PostgreSQL</h4>
+          <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">🌿 For Eco Techno Leaders: "Master mangrove conservation tech! 📊💻 TUTORIAL: PostgreSQL Database for Mangrove Ecosystem 🛢️</p>
+          <div class="mt-auto">
+            <!-- tech tags -->
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="flex items-center gap-1 px-2 py-1 text-xs bg-blue-900 text-white rounded">
+                <img src="icons/postgreSQL.png" class="h-3 w-3"> PostgreSQL
+              </span>
+              <span class="px-2 py-1 text-xs bg-orange-600 text-white rounded">Eco TechnoLeader</span>
+            </div>
+            <!-- tombol GitHub -->
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/ilfijandrisno/TUTORIAL-DATABASE-MANGROVE-WITH-POSTGRESQL"
+                target="_blank"
+                class="inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 hover:bg-yellow-500 text-white rounded">
+                <i class="fab fa-github"></i>
+                Check on GitHub
+              </a>
+              <button disabled
+                      title="Belum tersedia live demo"
+                      class="opacity-50 cursor-not-allowed inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 text-white rounded">
+                <i class="fas fa-play-circle"></i>
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-900"data-aos="fade-up">
+  <section id="contact" class="py-20 bg-gray-900" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center text-yellow-400 mb-12">Kontak & Sosial Media</h3>
       <div class="social-links mb-8 flex flex-wrap justify-center gap-2">
