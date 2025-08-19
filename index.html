@@ -128,10 +128,11 @@
       <!-- Filter buttons -->
       <div class="mb-8 flex flex-wrap justify-center gap-2">
         <button class="filter-btn px-4 py-2 bg-yellow-500 text-white rounded-full active" data-filter="all">All</button>
-        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="ds">Data Science</button>
         <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="algo">Algorithm Utility</button>
-        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="db">Database</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="ai">AI</button> 
         <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="dashboard">Dashboard</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="db">Database</button>
+        <button class="filter-btn px-4 py-2 bg-gray-600 text-white rounded-full" data-filter="ds">Data Science</button>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Project 1 -->
@@ -252,11 +253,48 @@
           </div>
         </div>
         <!-- Project 4 -->
+        <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="ai">
+          <!-- Thumbnail -->
+          <div class="relative w-full h-40 md:h-44 rounded overflow-hidden mb-3">
+            <img src="assets/img/N8N_workflow.png"
+                 alt="Proyek 4"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="lazy">
+          </div>
+          <h4 class="font-bold">🌋Disaster / Crisis Alert Hub</h4>
+          <p class="text-sm text-gray-300 mb-3 flex-grow overflow-y-auto max-h-28">n8n Disaster / Crisis Alert Hub adalah workflow untuk mengirim peringatan gempa BMKG ke Telegram secara otomatis, relevan (sesuai lokasi & ambang magnitudo), dan tanpa spam.</p>
+          <div class="mt-auto">
+            <!-- tech tags -->
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="flex items-center gap-1 px-2 py-1 text-xs bg-pink-600 text-white rounded">
+                <img src="icons/N8N.png" class="h-3 w-3"> N8N
+              </span>
+              <span class="px-2 py-1 text-xs bg-white text-black rounded">Automation</span>
+            </div>
+            <!-- tombol GitHub -->
+            <div class="flex gap-2">
+              <a
+                href="https://github.com/ilfijandrisno/n8n-Disaster-Crisis-Alert-Hub"
+                target="_blank"
+                class="inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 hover:bg-yellow-500 text-white rounded">
+                <i class="fab fa-github"></i>
+                Check on GitHub
+              </a>
+              <button disabled
+                      title="Belum tersedia live demo"
+                      class="opacity-50 cursor-not-allowed inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold bg-gray-800 text-white rounded">
+                <i class="fas fa-play-circle"></i>
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
         <div class="project-card bg-gray-700 rounded-lg p-4 flex flex-col min-h-[420px]" data-category="db">
           <!-- Thumbnail -->
           <div class="relative w-full h-40 md:h-44 rounded overflow-hidden mb-3">
             <img src="assets/img/tutorial_postgresql.png"
-                 alt="Proyek 3"
+                 alt="Proyek 5"
                  class="absolute inset-0 w-full h-full object-cover"
                  loading="lazy">
           </div>
